@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Music Player</title>
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="player-container">
+		<!-- Song -->
+		<div class="img-container">
+			<img src="img/yannick-1.jpg" alt="Album cover">
+		</div>
+		<h2 id="title">Non Stop</h2>
+		<h3 id="artist">Unknown Instrumentalz</h3>
+		<!-- controls allows us to use and control the audio (play, pause, rewind, playback speed) -->
+		<audio src="music/yannick-1.mp3"></audio>
+		<!-- Progress bar -->
+		<div class="progress-container" id="progress-container">
+			<div class="progress" id="progress"></div>
+			<div class="duration-wrapper">
+				<span id="current-time">0:00</span>
+				<span id="duration">3:05</span>
+			</div>
+		</div>
+		<!-- Controls, icons from font awesome, imported above -->
+		<div class="player-controls">
+			<i class="fa-solid fa-backward" id="previous" title="Previous"></i>
+			<i class="fa-solid fa-play main-button" id="play" title="Play"></i>
+			<i class="fa-solid fa-forward" id="forward" title="Forward"></i>
+		</div>
+	</div>
+
+	<!-- Javascript -->
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

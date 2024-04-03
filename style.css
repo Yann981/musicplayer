@@ -1,0 +1,152 @@
+/*Import link from Google Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap')
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background: #c9ced3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Lexend, sans-serif;
+	font-size: 12px;
+}
+
+.player-container {
+/*Ideal width and height for smartphones without media queries*/	
+	height: 500px;
+	width: 400px;
+/*Slightly lighter background than the body*/
+	background: #e7e7e7;
+/*Rounded corners*/
+	border-radius: 20px;
+/*Adds a shadow outside the container, horizontal, vertical, blur radius and spread radius*/
+	box-shadow: 0px 15px 30px 5px rgba(0, 0, 0, 0.3);
+}
+
+.img-container {
+	height: 300px;
+	width: 300px;
+	position: relative;
+	top: -50px;
+	left: 50px;
+}
+
+.img-container img {
+	height: 100%;
+	width: 100%;
+	/*Fills the space, but does not distort the image quality*/
+	object-fit: cover;
+	box-shadow: 0px 5px 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  margin: 5px 0 0;
+}
+
+
+/* Progress bar */
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
+  height: 4px;
+  width: 90%;
+}
+
+.progress {
+  background: #242323;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/*Duration Wrapper*/
+.duration-wrapper {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Controls */
+.player-controls {
+  position: relative;
+  top: -25px;
+  left: 120px;
+  width: 200px;
+}
+
+.fa-solid {
+  font-size: 30px;
+  color: rgb(129, 129, 129);
+  margin-right: 30px;
+/*Pointer cursor when users goes on the icons and unable to select like a font*/
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa-solid:hover {
+/*Become 20% darker when users hovers on the icons*/
+	filter: brightness(80%);
+}
+
+
+.main-button {
+  font-size: 40px;
+  position: relative;
+  top: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+	.player-container {
+/*95% of the screen width*/
+		width: 95vw;
+	}
+
+	.img-container {
+		left: 29px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 15px;
+	}
+}
